@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dev.log // Home</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+
+    <style>
+        :root { --accent-color: #00dd8d; --border-color: #cccccc; --text-color: #333333; --muted-text-color: #888888; }
+        * { box-sizing: border-box; }
+        body { font-family: 'JetBrains Mono', monospace; color: var(--text-color); background-color: #ffffff; margin: 0; padding: 0; display: flex; flex-direction: column; min-height: 100vh; }
+        .container { width: 100%; max-width: 900px; margin-left: auto; margin-right: auto; padding: 0 2rem; }
+        main { flex-grow: 1; }
+        .site-header { padding: 1.5rem 0; border-bottom: 1px solid var(--border-color); }
+        .navbar { display: flex; justify-content: space-between; align-items: center; }
+        .navbar-title { font-size: 1.25rem; font-weight: 700; }
+        .navbar-links { display: flex; gap: 2rem; }
+        a { color: var(--accent-color); text-decoration: none; }
+        a:hover { text-decoration: underline; }
+        .site-title-link { color: var(--text-color); text-decoration: none; }
+        .page-header { margin-top: 3rem; margin-bottom: 2rem; border-bottom: 1px solid var(--border-color); padding-bottom: 1rem; }
+        .page-title { font-size: 2rem; font-weight: 700; }
+        .post-item { border: 1px solid var(--border-color); padding: 1.5rem; margin-bottom: 1.5rem; }
+        .post-title { font-size: 1.5rem; font-weight: 700; margin: 0 0 0.5rem 0; }
+        .post-title a { color: var(--text-color); }
+        .post-meta { font-size: 0.875rem; color: var(--muted-text-color); margin-bottom: 1rem; }
+        .post-excerpt { margin: 0; line-height: 1.6; }
+        .site-footer { margin-top: 4rem; padding: 1.5rem 0; border-top: 1px solid var(--border-color); text-align: center; font-size: 0.875rem; color: var(--muted-text-color); }
+    </style>
+</head>
+<body>
+
+    <header class="site-header">
+        <div class="container">
+            <nav class="navbar">
+                <div class="navbar-title">
+                    <a href="index.html" class="site-title-link">// dev.log</a>
+                </div>
+                <div class="navbar-links">
+                    <a href="index.html">/home</a>
+                    <a href="#">/about</a>
+                    <a href="login.html">/account</a>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container">
+        <header class="page-header">
+            <h1 class="page-title">Latest Logs</h1>
+        </header>
+
+        <div class="post-list">
+            <article class="post-item">
+                <h2 class="post-title">
+                    <a href="post.html">Building with Raw HTML and Structural CSS</a>
+                </h2>
+                <p class="post-meta">[2025-08-26] // tags: #html #css #design</p>
+                <p class="post-excerpt">An exploration into a minimalist design philosophy where aesthetics are derived purely from structure, spacing, and typography...</p>
+            </article>
+            <article class="post-item">
+                <h2 class="post-title">
+                    <a href="post.html">Graceful Shutdowns in Go HTTP Servers</a>
+                </h2>
+                <p class="post-meta">[2025-08-22] // tags: #golang #backend #devops</p>
+                <p class="post-excerpt">Learn how to handle OS signals to allow your Go server to finish processing in-flight requests before shutting down...</p>
+            </article>
+            <article class="post-item">
+                <h2 class="post-title">
+                    <a href="post.html">An Introduction to PostgreSQL & sqlx</a>
+                </h2>
+                <p class="post-meta">[2025-08-15] // tags: #database #golang #sql</p>
+                <p class="post-excerpt">A practical guide to using the `sqlx` library, a powerful extension to the standard `database/sql` package...</p>
+            </article>
+        </div>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container">
+            <p>&copy; 2025 Your Name // All content is raw and structural.</p>
+        </div>
+    </footer>
+
+</body>
+</html>

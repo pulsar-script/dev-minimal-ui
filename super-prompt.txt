@@ -1,0 +1,82 @@
+Of course. After thoroughly analyzing the three HTML files, I've distilled the essence of your unique "Developer-Notebook" theme into a comprehensive and reusable "super prompt."
+
+This prompt is designed to be given to any capable AI model (including myself in the future) to generate a frontend UI that perfectly matches this aesthetic for any backend project you create. It contains all the necessary principles, technical specifications, and structural blueprints.
+
+Here is the final prompt:
+
+***
+
+### **Super Prompt: The "Developer-Notebook" UI Theme**
+
+**Objective:** Generate a multi-page HTML website to serve as a frontend for a backend application. The design must strictly adhere to the "Developer-Notebook" theme, a raw, minimalist, and functional aesthetic inspired by technical documentation and classic terminal interfaces. The UI should feel intentionally un-designed, prioritizing structure, readability, and function over decorative flair.
+
+---
+
+#### **1. Core Philosophy & Guiding Principles**
+
+* **Aesthetic:** Raw, structural, and minimalist. It should look like a clean, well-organized developer's personal log or a piece of high-quality technical documentation.
+* **Technology:** Use only vanilla HTML and a single embedded `<style>` block. **Do not use any external CSS frameworks** like Bootstrap or Tailwind.
+* **Function Over Form:** Every design choice must serve a purpose—clarity, separation of content, or hierarchy. Avoid all decorative CSS (e.g., shadows, gradients, complex animations).
+* **Consistency is Key:** All pages and components must follow these rules precisely to maintain a cohesive and unique brand identity.
+
+---
+
+#### **2. Technical & CSS Specifications**
+
+* **Font:** The **only** font family to be used is `'JetBrains Mono'`, sourced from Google Fonts. All text—headings, body, links, buttons—must use this font.
+* **Color Palette (Monochrome + Accent):**
+    * Background: `background-color: #ffffff;` (Pure White)
+    * Primary Text: `color: #333333;` (Very Dark Gray)
+    * Muted Text (for metadata, placeholders): `color: #888888;` (Medium Gray)
+    * Borders: `border-color: #cccccc;` (Light Gray)
+    * Accent Color (for links `<a>` only): `color: #00dd8d;` (Vibrant Mint Green)
+* **Layout Engine:** Use `flexbox` for all primary layout needs (e.g., header/footer structure, centering forms, side-by-side content).
+* **Spacing:** Use `rem` units for consistent spacing. Maintain generous whitespace. Key values:
+    * Padding for containers: `2rem`
+    * Gaps between elements: `1.5rem` to `2rem`
+* **Borders:** Use simple, solid `1px` borders with `border-color: #cccccc;` to define containers like posts, forms, and reviews. Use a `2px` left-border for blockquotes.
+* **CSS Variables:** Define the color palette in the `:root` for easy maintenance.
+
+---
+
+#### **3. Structural Blueprints (HTML & Layout)**
+
+* **Overall Page Structure:**
+    1.  `<header class="site-header">`: Full-width, contains the main navbar. Has a `1px` bottom border.
+    2.  `<main class="container">`: The primary content area. This container must be centered with `margin: auto;` and have a `max-width: 900px;`.
+    3.  `<footer class="site-footer">`: Full-width, contains copyright or secondary links. Has a `1px` top border.
+    * The `<body>` tag must use `display: flex; flex-direction: column; min-height: 100vh;` to ensure the footer sticks to the bottom of the viewport on short pages.
+
+* **Navbar (`<nav class="navbar">`):**
+    * Use `display: flex; justify-content: space-between; align-items: center;`.
+    * **Site Title:** Displayed as `// dev.log` (or project equivalent). It should be a non-accent colored link back to the homepage.
+    * **Navigation Links:** Displayed as `/link`. Simple text links with generous `gap` spacing.
+
+---
+
+#### **4. Component Library & Styling Rules**
+
+* **Blog Post Items (`<article class="post-item">`):**
+    * Each post must be a distinct card with `border: 1px solid var(--border-color);` and `padding: 1.5rem;`.
+    * **Title (`.post-title`):** Large (`1.5rem`), bold, and non-accent colored.
+    * **Metadata (`.post-meta`):** Smaller (`0.875rem`) and use `--muted-text-color`. Format as `[YYYY-MM-DD] // tags: #tag1 #tag2`.
+
+* **Single Post Content (`.post-content`):**
+    * Increase `line-height` to `1.7` for enhanced readability.
+    * **Blockquotes (`<blockquote>`):** Style with a `border-left: 2px solid var(--border-color);` and use `--muted-text-color`.
+    * **Code Blocks (`<pre>`):** Wrap in a `1px` border with padding to visually contain the code.
+
+* **Forms (`<div class="form-container">`):**
+    * For login/signup pages, center the form container within the `<main>` tag using flexbox.
+    * The container must have a `1px` border and generous padding (`2rem`).
+    * **Labels (`.form-label`):** Small (`0.875rem`), placed above the input.
+    * **Inputs (`.form-control`):** Full-width, with `1px` border, padding, and `font-family: 'JetBrains Mono'`.
+    * **Buttons (`.btn`):** Full-width, transparent background, `1px` solid border using primary text color, and bold text. No background color on buttons.
+
+* **Review/Comment Section (`.reviews-section`):**
+    * Separate from the main article with a `1px` top border.
+    * Each comment (`.review-item`) should be a bordered container, similar to a post item but with less padding.
+
+***
+
+By following this prompt, you will consistently generate UIs that are clean, professional, and instantly recognizable as part of my "Developer-Notebook" brand.

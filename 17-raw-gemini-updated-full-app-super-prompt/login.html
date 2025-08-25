@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dev.log // Account</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+
+    <style>
+        :root { --accent-color: #00dd8d; --border-color: #cccccc; --text-color: #333333; --muted-text-color: #888888; }
+        * { box-sizing: border-box; }
+        body { font-family: 'JetBrains Mono', monospace; color: var(--text-color); background-color: #ffffff; margin: 0; padding: 0; display: flex; flex-direction: column; min-height: 100vh; }
+        .container { width: 100%; max-width: 900px; margin-left: auto; margin-right: auto; padding: 0 2rem; }
+        main { flex-grow: 1; display: flex; align-items: center; justify-content: center; }
+        .site-header { padding: 1.5rem 0; border-bottom: 1px solid var(--border-color); }
+        .navbar { display: flex; justify-content: space-between; align-items: center; }
+        .navbar-title { font-size: 1.25rem; font-weight: 700; }
+        .navbar-links { display: flex; gap: 2rem; }
+        a { color: var(--accent-color); text-decoration: none; }
+        a:hover { text-decoration: underline; }
+        .site-title-link { color: var(--text-color); text-decoration: none; }
+        .form-container { border: 1px solid var(--border-color); padding: 2rem; width: 100%; max-width: 450px; }
+        .form-title { font-size: 1.5rem; font-weight: 700; margin: 0 0 1.5rem 0; text-align: center; }
+        .form-group { margin-bottom: 1rem; }
+        .form-label { display: block; margin-bottom: 0.5rem; font-size: 0.875rem; }
+        .form-control { width: 100%; padding: 0.75rem; font-family: 'JetBrains Mono', monospace; border: 1px solid var(--border-color); }
+        .btn { width: 100%; padding: 0.75rem 1.5rem; border: 1px solid var(--text-color); background: transparent; color: var(--text-color); font-family: 'JetBrains Mono', monospace; font-weight: 700; }
+        .form-footer-text { font-size: 0.875rem; text-align: center; margin-top: 1.5rem; color: var(--muted-text-color); }
+        .site-footer { margin-top: 4rem; padding: 1.5rem 0; border-top: 1px solid var(--border-color); text-align: center; font-size: 0.875rem; color: var(--muted-text-color); }
+    </style>
+</head>
+<body>
+
+    <header class="site-header">
+        <div class="container">
+            <nav class="navbar">
+                <div class="navbar-title"><a href="index.html" class="site-title-link">// dev.log</a></div>
+                <div class="navbar-links"><a href="index.html">/home</a><a href="#">/about</a><a href="login.html">/account</a></div>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container">
+        <div class="form-container">
+            <h1 class="form-title">User Account</h1>
+            <form>
+                <div class="form-group">
+                    <label for="email" class="form-label">Email / Username:</label>
+                    <input type="text" id="email" class="form-control">
+                </div>
+                <div class="form-group">
+                    <label for="password" class="form-label">Password:</label>
+                    <input type="password" id="password" class="form-control">
+                </div>
+                <button type="submit" class="btn">Login</button>
+            </form>
+            <p class="form-footer-text">
+                No account? <a href="#">Sign up here</a>.
+            </p>
+        </div>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container">
+            <p>&copy; 2025 Your Name // All content is raw and structural.</p>
+        </div>
+    </footer>
+
+</body>
+</html>

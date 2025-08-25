@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dev.log // Single Post</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+
+    <style>
+        :root { --accent-color: #00dd8d; --border-color: #cccccc; --text-color: #333333; --muted-text-color: #888888; }
+        * { box-sizing: border-box; }
+        body { font-family: 'JetBrains Mono', monospace; color: var(--text-color); background-color: #ffffff; margin: 0; padding: 0; display: flex; flex-direction: column; min-height: 100vh; }
+        .container { width: 100%; max-width: 900px; margin-left: auto; margin-right: auto; padding: 0 2rem; }
+        main { flex-grow: 1; }
+        .site-header { padding: 1.5rem 0; border-bottom: 1px solid var(--border-color); }
+        .navbar { display: flex; justify-content: space-between; align-items: center; }
+        .navbar-title { font-size: 1.25rem; font-weight: 700; }
+        .navbar-links { display: flex; gap: 2rem; }
+        a { color: var(--accent-color); text-decoration: none; }
+        a:hover { text-decoration: underline; }
+        .site-title-link { color: var(--text-color); text-decoration: none; }
+        .post-header { margin-top: 3rem; margin-bottom: 2rem; }
+        .post-title { font-size: 2.5rem; font-weight: 700; margin: 0 0 0.5rem 0; }
+        .post-meta { font-size: 0.875rem; color: var(--muted-text-color); }
+        .post-content { line-height: 1.7; font-size: 1.05rem; }
+        .post-content p, .post-content blockquote, .post-content pre { margin-bottom: 1.5rem; }
+        .post-content pre { border: 1px solid var(--border-color); padding: 1rem; white-space: pre-wrap; word-wrap: break-word; }
+        .post-content blockquote { border-left: 2px solid var(--border-color); padding-left: 1.5rem; margin-left: 0; color: var(--muted-text-color); }
+        .reviews-section { margin-top: 3rem; padding-top: 2rem; border-top: 1px solid var(--border-color); }
+        .review-item { border: 1px solid var(--border-color); padding: 1rem; margin-bottom: 1rem; }
+        .review-meta { font-size: 0.875rem; color: var(--muted-text-color); margin-bottom: 0.5rem; }
+        .form-group { margin-bottom: 1rem; }
+        .form-label { display: block; margin-bottom: 0.5rem; font-size: 0.875rem; }
+        .form-control { width: 100%; padding: 0.75rem; font-family: 'JetBrains Mono', monospace; border: 1px solid var(--border-color); }
+        .btn { padding: 0.75rem 1.5rem; border: 1px solid var(--text-color); background: transparent; color: var(--text-color); font-family: 'JetBrains Mono', monospace; font-weight: 700; }
+        .site-footer { margin-top: 4rem; padding: 1.5rem 0; border-top: 1px solid var(--border-color); text-align: center; font-size: 0.875rem; color: var(--muted-text-color); }
+    </style>
+</head>
+<body>
+
+    <header class="site-header">
+        <div class="container">
+            <nav class="navbar">
+                <div class="navbar-title"><a href="index.html" class="site-title-link">// dev.log</a></div>
+                <div class="navbar-links"><a href="index.html">/home</a><a href="#">/about</a><a href="login.html">/account</a></div>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container">
+        <article>
+            <header class="post-header">
+                <h1 class="post-title">Building with Raw HTML and Structural CSS</h1>
+                <p class="post-meta">[2025-08-26] // tags: #html #css #design</p>
+            </header>
+            <div class="post-content">
+                <p>An exploration into a minimalist design philosophy where aesthetics are derived purely from structure, spacing, and typography. This approach proves that a webpage can be clean and functional without complex design systems.</p>
+                <blockquote>This is the core principle of digital brutalism: raw, honest, and functional presentation of content without decorative flair.</blockquote>
+                <p>The code block below is an example of how preformatted text is presented. It is delineated only by a simple border and padding, maintaining the minimalist theme.</p>
+                <pre><code>body {
+    font-family: 'JetBrains Mono', monospace;
+    margin: 0;
+    padding: 0;
+}</code></pre>
+                <p>Ultimately, this approach is a testament to the power of well-organized, semantic HTML and a disciplined use of CSS for layout.</p>
+            </div>
+        </article>
+
+        <section class="reviews-section">
+            <h2>Reviews</h2>
+            <div class="review-list">
+                <div class="review-item">
+                    <p class="review-meta">user_123 on [2025-08-26]</p>
+                    <p>Great article. Very clear and to the point.</p>
+                </div>
+            </div>
+            <form class="review-form" style="margin-top: 2rem;">
+                <h3>Leave a Review</h3>
+                <div class="form-group">
+                    <label for="review-text" class="form-label">Your Comment:</label>
+                    <textarea id="review-text" class="form-control" rows="4"></textarea>
+                </div>
+                <button type="submit" class="btn">Submit</button>
+            </form>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container">
+            <p>&copy; 2025 Your Name // All content is raw and structural.</p>
+        </div>
+    </footer>
+
+</body>
+</html>
