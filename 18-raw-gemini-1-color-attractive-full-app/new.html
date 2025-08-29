@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>// dev.todo — new</title>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600;800&display=swap" rel="stylesheet">
+  <style>
+    :root{ --bg:#ffffff; --text:#333333; --muted:#888888; --border:#cccccc; --accent:#00dd8d; }
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    body{ margin:0; background:var(--bg); color:var(--text);
+      font:400 16px/1.5 'JetBrains Mono', monospace;
+      display:flex; flex-direction:column; min-height:100vh; }
+    .site-header,.site-footer{ border-bottom:1px solid var(--border); }
+    .site-footer{ border-bottom:0; border-top:1px solid var(--border); margin-top:auto;}
+    .container{ max-width:900px; margin:0 auto; padding:2rem;}
+    .navbar{ display:flex; justify-content:space-between; align-items:center; gap:1.5rem}
+    .site-title a{ text-decoration:none; color:var(--text); font-weight:800 }
+    .nav-links{ display:flex; gap:2rem }
+    a{ color:var(--accent); text-decoration:none }
+    a:hover, a:focus{ text-decoration:underline }
+
+    .form-container{ border:1px solid var(--border); padding:2rem; display:flex; flex-direction:column; gap:1rem; }
+    .form-row{ display:flex; gap:1.5rem; flex-wrap:wrap }
+    .form-label{ font-size:0.875rem; color:var(--muted) }
+    .form-control{ width:100%; padding:0.7rem 0.8rem; border:1px solid var(--border); font-family:'JetBrains Mono', monospace; }
+    .btn{ display:inline-block; width:100%; padding:0.8rem 1rem; border:1px solid var(--text); background:transparent; font-weight:700; cursor:pointer }
+  </style>
+</head>
+<body>
+<header class="site-header">
+  <div class="container">
+    <nav class="navbar">
+      <div class="site-title"><a href="index.html">// dev.todo</a></div>
+      <div class="nav-links">
+        <a href="index.html">/todos</a>
+        <a href="new.html">/new</a>
+        <a href="login.html">/login</a>
+      </div>
+    </nav>
+  </div>
+</header>
+
+<main class="container">
+  <h1 style="margin-top:0; font-size:1.75rem; font-weight:800">/new</h1>
+
+  <div class="form-container">
+    <div>
+      <label class="form-label" for="title">title</label>
+      <input id="title" class="form-control" placeholder="e.g., Implement PATCH /todos/:id" />
+    </div>
+
+    <div>
+      <label class="form-label" for="desc">description</label>
+      <textarea id="desc" class="form-control" rows="6" placeholder="write details…"></textarea>
+    </div>
+
+    <div class="form-row">
+      <div style="flex:1 1 12rem">
+        <label class="form-label" for="tags">tags</label>
+        <input id="tags" class="form-control" placeholder="#backend #api" />
+      </div>
+      <div style="flex:1 1 12rem">
+        <label class="form-label" for="status">status</label>
+        <select id="status" class="form-control">
+          <option>open</option>
+          <option>in-progress</option>
+          <option>done</option>
+          <option>backlog</option>
+        </select>
+      </div>
+      <div style="flex:1 1 12rem">
+        <label class="form-label" for="date">date</label>
+        <input id="date" type="date" class="form-control" />
+      </div>
+    </div>
+
+    <button class="btn" type="button">create todo</button>
+  </div>
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <small class="muted">© 2025 dev.todo</small>
+  </div>
+</footer>
+</body>
+</html>

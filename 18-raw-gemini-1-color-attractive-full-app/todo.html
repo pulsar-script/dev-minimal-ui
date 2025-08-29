@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>// dev.todo — item</title>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600;800&display=swap" rel="stylesheet">
+  <style>
+    :root{ --bg:#ffffff; --text:#333333; --muted:#888888; --border:#cccccc; --accent:#00dd8d; }
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    body{ margin:0; background:var(--bg); color:var(--text);
+      font:400 16px/1.5 'JetBrains Mono', monospace;
+      display:flex; flex-direction:column; min-height:100vh; }
+    .site-header,.site-footer{ border-bottom:1px solid var(--border); }
+    .site-footer{ border-bottom:0; border-top:1px solid var(--border); margin-top:auto;}
+    .container{ max-width:900px; margin:0 auto; padding:2rem;}
+    .navbar{ display:flex; justify-content:space-between; align-items:center; gap:1.5rem}
+    .site-title a{ text-decoration:none; color:var(--text); font-weight:800 }
+    .nav-links{ display:flex; gap:2rem }
+    a{ color:var(--accent); text-decoration:none }
+    a:hover, a:focus{ text-decoration:underline }
+
+    .post-item{ border:1px solid var(--border); padding:1.5rem; display:flex; flex-direction:column; gap:0.75rem }
+    .post-title{ font-size:1.5rem; font-weight:800; margin:0 }
+    .post-meta{ color:var(--muted); font-size:0.875rem }
+    .post-content{ line-height:1.7; display:flex; flex-direction:column; gap:1rem }
+    blockquote{ margin:0; padding-left:1rem; border-left:2px solid var(--border); color:var(--muted) }
+    pre{ margin:0; padding:1rem; border:1px solid var(--border); overflow:auto }
+
+    .btn{ display:inline-block; padding:0.6rem 0.9rem; border:1px solid var(--text); background:transparent; font-weight:700; cursor:pointer }
+    .actions{ display:flex; gap:1rem; flex-wrap:wrap }
+
+    .reviews-section{ margin-top:2rem; padding-top:2rem; border-top:1px solid var(--border); display:flex; flex-direction:column; gap:1rem }
+    .review-item{ border:1px solid var(--border); padding:1rem; display:flex; flex-direction:column; gap:0.5rem }
+    .review-meta{ color:var(--muted); font-size:0.875rem }
+    .add-note{ border:1px solid var(--border); padding:1.5rem; display:flex; flex-direction:column; gap:0.75rem }
+    .form-label{ font-size:0.875rem; color:var(--muted) }
+    .form-control{ width:100%; padding:0.7rem 0.8rem; border:1px solid var(--border); font-family:'JetBrains Mono', monospace; }
+  </style>
+</head>
+<body>
+<header class="site-header">
+  <div class="container">
+    <nav class="navbar">
+      <div class="site-title"><a href="index.html">// dev.todo</a></div>
+      <div class="nav-links">
+        <a href="index.html">/todos</a>
+        <a href="new.html">/new</a>
+        <a href="login.html">/login</a>
+      </div>
+    </nav>
+  </div>
+</header>
+
+<main class="container">
+  <article class="post-item">
+    <h1 class="post-title">Wire up REST endpoints for /todos</h1>
+    <div class="post-meta">[2025-08-24] // id: T-1021 // tags: #backend #api // status: open</div>
+    <div class="post-content">
+      <p>Target a small, consistent surface. Keep nouns stable, verbs flexible.</p>
+      <blockquote>
+        API is a contract. Prefer additive changes; avoid breaking ones.
+      </blockquote>
+      <pre><code>GET    /todos
+POST   /todos
+GET    /todos/:id
+PATCH  /todos/:id
+DELETE /todos/:id</code></pre>
+      <div class="actions">
+        <button class="btn">mark done</button>
+        <button class="btn">edit</button>
+        <button class="btn">delete</button>
+      </div>
+    </div>
+
+    <section class="reviews-section">
+      <h2 style="margin:0; font-size:1.25rem; font-weight:800">/notes</h2>
+
+      <div class="review-item">
+        <div class="review-meta">[2025-08-25] // by: @techtopic</div>
+        <p>Add pagination to <code>GET /todos</code> (limit, cursor).</p>
+      </div>
+
+      <div class="review-item">
+        <div class="review-meta">[2025-08-25] // by: @reviewer</div>
+        <p>Consider <code>PATCH</code> semantics: partial updates only.</p>
+      </div>
+
+      <form class="add-note">
+        <label class="form-label" for="note">add note</label>
+        <textarea id="note" class="form-control" rows="4" placeholder="type your note…"></textarea>
+        <button class="btn" type="button">save note</button>
+      </form>
+    </section>
+  </article>
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <small class="muted">© 2025 dev.todo</small>
+  </div>
+</footer>
+</body>
+</html>

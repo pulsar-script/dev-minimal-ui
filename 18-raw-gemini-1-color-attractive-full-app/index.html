@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>// dev.todo — all</title>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600;800&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --bg:#ffffff;
+      --text:#333333;
+      --muted:#888888;
+      --border:#cccccc;
+      --accent:#00dd8d;
+    }
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    body{
+      margin:0;
+      background:var(--bg);
+      color:var(--text);
+      font:400 16px/1.5 'JetBrains Mono', monospace;
+      display:flex; flex-direction:column; min-height:100vh;
+    }
+    .site-header,.site-footer{
+      border-bottom:1px solid var(--border);
+    }
+    .site-footer{ border-bottom:0; border-top:1px solid var(--border); margin-top:auto;}
+    .container{ max-width:900px; margin:0 auto; padding:2rem;}
+    .navbar{ display:flex; justify-content:space-between; align-items:center; gap:1.5rem}
+    .site-title a{ text-decoration:none; color:var(--text); font-weight:800 }
+    .nav-links{ display:flex; gap:2rem; }
+    a{ color:var(--accent); text-decoration:none }
+    a:hover, a:focus{ text-decoration:underline }
+    .page-title{ font-size:1.75rem; font-weight:800; margin:0 0 1.5rem }
+    .toolbar{ display:flex; gap:1.5rem; align-items:center; margin-bottom:2rem; flex-wrap:wrap }
+    .toolbar .form-control{ padding:0.6rem 0.8rem; border:1px solid var(--border); width:16rem; font-family:'JetBrains Mono', monospace; }
+    .btn{ display:inline-block; padding:0.7rem 1rem; border:1px solid var(--text); background:transparent; font-weight:700; cursor:pointer }
+    .list{ display:flex; flex-direction:column; gap:1.5rem }
+    .post-item{ border:1px solid var(--border); padding:1.5rem; display:flex; flex-direction:column; gap:0.75rem }
+    .post-title{ font-size:1.5rem; font-weight:800; margin:0 }
+    .post-meta{ color:var(--muted); font-size:0.875rem }
+    .tags a{ margin-right:0.5rem }
+    .empty{ color:var(--muted); border:1px dashed var(--border); padding:1.5rem; }
+    .site-footer small{ color:var(--muted) }
+  </style>
+</head>
+<body>
+  <header class="site-header">
+    <div class="container">
+      <nav class="navbar">
+        <div class="site-title"><a href="index.html">// dev.todo</a></div>
+        <div class="nav-links">
+          <a href="index.html">/todos</a>
+          <a href="new.html">/new</a>
+          <a href="login.html">/login</a>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <h1 class="page-title">/todos</h1>
+
+    <div class="toolbar">
+      <input class="form-control" placeholder="filter: status:open tag:#ui" />
+      <input class="form-control" placeholder="search: text contains..." />
+      <a class="btn" href="new.html">+ new todo</a>
+    </div>
+
+    <section class="list">
+      <article class="post-item">
+        <h2 class="post-title"><a href="todo.html">Wire up REST endpoints for /todos</a></h2>
+        <div class="post-meta">[2025-08-24] // tags: <span class="tags"><a href="#">#backend</a> <a href="#">#api</a></span> // status: open</div>
+        <p>Define routes: GET /todos, POST /todos, GET /todos/:id, PATCH /todos/:id, DELETE /todos/:id.</p>
+      </article>
+
+      <article class="post-item">
+        <h2 class="post-title"><a href="todo.html">Add optimistic UI updates</a></h2>
+        <div class="post-meta">[2025-08-22] // tags: <span class="tags"><a href="#">#frontend</a> <a href="#">#ux</a></span> // status: in-progress</div>
+        <p>Show immediate list changes before server confirms; reconcile on error.</p>
+      </article>
+
+      <article class="post-item">
+        <h2 class="post-title"><a href="todo.html">Role-based access (admin, user)</a></h2>
+        <div class="post-meta">[2025-08-20] // tags: <span class="tags"><a href="#">#auth</a></span> // status: backlog</div>
+        <p>Restrict destructive actions to owners/admins. Integrate with session cookie.</p>
+      </article>
+
+      <div class="empty">No more items.</div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <small>© 2025 dev.todo // minimal developer-notebook UI</small>
+    </div>
+  </footer>
+</body>
+</html>
